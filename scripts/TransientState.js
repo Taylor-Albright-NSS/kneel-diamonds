@@ -28,6 +28,6 @@ export const saveOrderSubmission = async () => {
     }
 
     const response = await fetch("http://localhost:8088/orders", postOptions)
-    const customEvent = new CustomEvent("newSubmissionCreated")
+    const customEvent = new CustomEvent("newOrderPlaced")
     document.dispatchEvent(customEvent)
 }
